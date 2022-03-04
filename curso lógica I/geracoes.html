@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha () {
+		document.write("<br><hr>");
+	}
+
+	function mostra (texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var ano1 = 1500
+	var anoAtual = 2021
+	var diferenca = anoAtual - ano1
+	var geracao = diferenca/28
+
+	mostra("Desde que os portugueses chegaram no Brasil em 1500, se passaram " + (Math.round(geracao)) + " gerações");
+
+</script>

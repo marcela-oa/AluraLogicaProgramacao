@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha () {
+		document.write("<br>");
+	}
+
+	function mostra (texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	mostra ("Os números de 20 a 0, em ordem descrescente, são:" + "<br>");
+
+	var numero = 20
+
+	while (numero >= 0) {
+		mostra (numero);
+		numero = numero - 1
+	}
+
+	mostra ("<br>" + "FIM!");
+
+</script>

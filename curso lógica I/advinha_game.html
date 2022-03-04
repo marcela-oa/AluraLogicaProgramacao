@@ -1,0 +1,76 @@
+<meta charset = "UTF-8">
+
+<input type="" name="">
+<button>Veja se você conseguiu advinhar o que eu pensei</button>
+
+<script type="text/javascript">
+
+	function sorteia () {
+		return Math.round(Math.random()*100);
+	}
+
+	function sorteiaNumero (quantidade) {
+
+		var numeros = [];
+
+		var lugar = 1
+
+		while (lugar <= quantidade) {
+			var numeroAleatorio = sorteia();
+
+			if (numeroAleatorio != 0) {
+
+			var achou = false
+
+			for (var posicao = 0; posicao < numeros.length; posicao++) {
+
+				if (numeros[posicao] == numeroAleatorio) {
+
+					achou = true;
+					break;
+				}
+			}
+				if (achou == false) {
+				numeros.push(numeroAleatorio);
+				lugar++;
+				}
+			}
+		}
+
+		return numeros
+
+	}
+
+	var numeros = sorteiaNumero(3);
+
+	console.log (numeros);
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica () {
+
+		var achou = false
+
+		for (var posicao = 0; posicao < numeros.length; posicao++) {
+
+			if (input.value == numeros[posicao]) {
+			alert ("Você acertou. Parabéns!");
+			achou = true
+			break;
+			} 
+		}
+
+		if (achou == false) {
+			alert ("Você errou!!")
+		
+		}
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+
+
+</script>

@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    
+    var tentativaAtual = 2
+    var tentativasMaximas = 4
+
+    while (tentativaAtual <= tentativasMaximas) {
+	
+	var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    	if (loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+    		alert("Bem vindo ao sistema " + loginInformado);
+
+    	} else {
+    		if (tentativaAtual < 4){
+				alert("Login inválido. Tente novamente");
+    		} else { 
+				alert("Você errou três vezes. Seu login foi bloqueado")}
+		}
+	
+	  tentativaAtual = tentativaAtual + 1}
+
+</script>

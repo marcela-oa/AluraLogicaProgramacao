@@ -1,0 +1,24 @@
+<meta charset = "UTF-8">
+
+<script> 
+
+	function pulaLinha () {
+		document.write("<br>");
+	}
+
+	function mostra (texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var tabuada = Math.round(Math.random()*10);
+
+	mostra("Tabuada do " + tabuada + "<br>");
+
+	for (multiplicador = 1; multiplicador <= 10; multiplicador++) {
+		mostra (tabuada + " x " + multiplicador + " = " + (tabuada * multiplicador));
+	}
+
+	mostra ("<br>" + "FIM!");
+
+</script>
